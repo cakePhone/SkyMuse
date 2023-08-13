@@ -1,0 +1,8 @@
+{
+	"appId": "com.oriooreo.skymuse",
+	"appName": "SkyMuse",
+	"webDir": "build",
+	"server": {
+		"androidScheme": "https"
+	}
+}

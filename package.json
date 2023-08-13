@@ -1,0 +1,44 @@
+{
+	"name": "skymuse",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"ionic:build": "npm run build",
+		"ionic:serve": "npm run dev"
+	},
+	"devDependencies": {
+		"@capacitor/assets": "^2.0.4",
+		"@capacitor/cli": "^5.2.2",
+		"@floating-ui/dom": "^1.5.1",
+		"@iconify/svelte": "^3.1.4",
+		"@skeletonlabs/skeleton": "^1.10.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.3",
+		"@sveltejs/kit": "^1.5.0",
+		"@tailwindcss/typography": "^0.5.9",
+		"autoprefixer": "^10.4.14",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.26.0",
+		"postcss": "^8.4.27",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.4.1",
+		"svelte": "^3.54.0",
+		"tailwindcss": "^3.3.3",
+		"vite": "^4.3.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@capacitor/android": "^5.2.2",
+		"@capacitor/core": "^5.2.2",
+		"@capacitor/network": "^5.0.6",
+		"@capacitor/splash-screen": "^5.0.6",
+		"spotify-web-api-js": "^1.5.2"
+	}
+}

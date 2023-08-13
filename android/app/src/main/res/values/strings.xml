@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SkyMuse</string>
+    <string name="title_activity_main">SkyMuse</string>
+    <string name="package_name">com.oriooreo.skymuse</string>
+    <string name="custom_url_scheme">com.oriooreo.skymuse</string>
+</resources>

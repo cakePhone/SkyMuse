@@ -1,0 +1,7 @@
+{
+	"name": "skymuse",
+	"integrations": {
+		"capacitor": {}
+	},
+	"type": "custom"
+}
