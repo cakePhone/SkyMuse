@@ -14,6 +14,9 @@ I probably set up a releases tab, try checking that. If not, it's under: /androi
 ## To Do's
 
 [ ] Add Daily Notifications
+
 [ ] More Weather Cards
+
 [ ] Fix design on some devices
+
 [ ] Add initial setup screen
