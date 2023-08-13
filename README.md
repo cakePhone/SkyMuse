@@ -9,7 +9,7 @@ Due to this, SkyMuse was designed in a way that you MUST input your location man
 
 ## Download
 
-I probably set up a releases tab, try checking that. If not, go to:
+I probably set up a releases tab, try checking that. If not, it's under: /android/app/release/app-release.apk
 
 ## To Do's
 
