@@ -112,7 +112,7 @@
 		<strong> © Copyright 2023 - Miguel Santos </strong>
 		<p>
 			You <strong>should</strong> have received a copy of the MIT license when downloading the app,
-			if not, it can be found <a class="anchor" href="/settings">here</a>.
+			if not, it can be found <a class="anchor" href="https://github.com/cakePhone/SkyMuse/blob/main/LICENSE">here</a>.
 		</p>
 	</div>
 	<div>
