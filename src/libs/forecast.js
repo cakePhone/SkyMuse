@@ -1,3 +1,7 @@
+import { locales } from './locales';
+
+let language;
+
 function getWeatherUnits(data) {
 	return {
 		temp: data['hourly_units']['temperature_2m'],
@@ -14,149 +18,151 @@ function getWeatherIconString(code, day) {
 	let weatherString;
 	let weatherIcon;
 
+	language = JSON.parse(localStorage.getItem('settings')).language;
+
 	switch (code) {
 		case 0:
-			weatherString = 'Clear sky';
+			weatherString = locales[language].weatherStrings.clearSky;
 			weatherIcon = `material-symbols:${day ? 'sunny-rounded' : 'bedtime'}`;
 			break;
 
 		case 1:
-			weatherString = 'Mainly Clear';
+			weatherString = locales[language].weatherStrings.mainlyClear;
 			weatherIcon = `material-symbols:${day ? 'partly-cloudy-day-rounded' : 'nights-stay'}`;
 			break;
 
 		case 2:
-			weatherString = 'Partly Cloudy';
+			weatherString = locales[language].weatherStrings.partlyCloudy;
 			weatherIcon = `material-symbols:${day ? 'partly-cloudy-day-rounded' : 'nights-stay'}`;
 			break;
 
 		case 3:
-			weatherString = 'Cloudy';
+			weatherString = locales[language].weatherStrings.cloudy;
 			weatherIcon = `material-symbols:cloud`;
 			break;
 
 		case 45:
-			weatherString = 'Foggy';
+			weatherString = locales[language].weatherStrings.foggy;
 			weatherIcon = `material-symbols:foggy`;
 			break;
 
 		case 48:
-			weatherString = 'Very Foggy';
+			weatherString = locales[language].weatherStrings.veryFoggy;
 			weatherIcon = `material-symbols:foggy`;
 			break;
 
 		case 51:
-			weatherString = 'Light Drizzle';
+			weatherString = locales[language].weatherStrings.lightDrizzle;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 53:
-			weatherString = 'Moderate Drizzle';
+			weatherString = locales[language].weatherStrings.moderateDrizzle;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 55:
-			weatherString = 'Dense Drizzle';
+			weatherString = locales[language].weatherStrings.denseDrizzle;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 56:
-			weatherString = 'Light Freezing Drizzle';
+			weatherString = locales[language].weatherStrings.lightFreezingDrizzle;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 57:
-			weatherString = 'Dense Freezing Drizzle';
+			weatherString = locales[language].weatherStrings.denseFreezingDrizzle;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 61:
-			weatherString = 'Slight Rain';
+			weatherString = locales[language].weatherStrings.slightRain;
 			weatherIcon = `material-symbols:rainy`;
 			break;
 
 		case 63:
-			weatherString = 'Moderate Rain';
+			weatherString = locales[language].weatherStrings.moderateRain;
 			weatherIcon = `material-symbols:rainy`;
 			break;
 
 		case 65:
-			weatherString = 'Heavy Rain';
+			weatherString = locales[language].weatherStrings.heavyRain;
 			weatherIcon = `material-symbols:rainy-heavy`;
 			break;
 
 		case 66:
-			weatherString = 'Freezing Slight Rain';
+			weatherString = locales[language].weatherStrings.slightFreezingRain;
 			weatherIcon = `material-symbols:rainy-snow`;
 			break;
 
 		case 67:
-			weatherString = 'Freezing Heavy Rain';
+			weatherString = locales[language].weatherStrings.heavyFreezingRain;
 			weatherIcon = `material-symbols:rainy-heavy`;
 			break;
 
 		case 71:
-			weatherString = 'Snowing Lightly';
+			weatherString = locales[language].weatherStrings.snowingLightly;
 			weatherIcon = `material-symbols:cloudy-snowing`;
 			break;
 
 		case 73:
-			weatherString = 'Snowing Moderately';
+			weatherString = locales[language].weatherStrings.snowingModerately;
 			weatherIcon = `material-symbols:cloudy-snowing`;
 			break;
 
 		case 75:
-			weatherString = 'Snowing Heavy';
+			weatherString = locales[language].weatherStrings.snowingHeavily;
 			weatherIcon = `material-symbols:cloudy-snowing`;
 			break;
 
 		case 77:
-			weatherString = 'Snow Grains';
+			weatherString = locales[language].weatherStrings.snowGrains;
 			weatherIcon = `material-symbols:grain`;
 			break;
 
 		case 80:
-			weatherString = 'Light Showers';
+			weatherString = locales[language].weatherStrings.lightShowers;
 			weatherIcon = `material-symbols:rainy`;
 			break;
 
 		case 81:
-			weatherString = 'Moderate Showers';
+			weatherString = locales[language].weatherStrings.moderateShowers;
 			weatherIcon = `material-symbols:rainy`;
 			break;
 
 		case 82:
-			weatherString = 'Heavy Showers';
+			weatherString = locales[language].weatherStrings.heavyShowers;
 			weatherIcon = `material-symbols:rainy-heavy`;
 			break;
 
 		case 85:
-			weatherString = 'Slight Snow Showers';
+			weatherString = locales[language].weatherStrings.lightShowers;
 			weatherIcon = `material-symbols:rainy-snow`;
 			break;
 
 		case 86:
-			weatherString = 'Heavy Snow Showers';
+			weatherString = locales[language].weatherStrings.heavyShowers;
 			weatherIcon = `material-symbols:rainy-snow`;
 			break;
 
 		case 95:
-			weatherString = 'Thunderstorm';
+			weatherString = locales[language].weatherStrings.thunderStorm;
 			weatherIcon = `material-symbols:thunderstorm-rounded`;
 			break;
 
 		case 96:
-			weatherString = 'Thunderstorm with Slight Hail';
+			weatherString = locales[language].weatherStrings.thunderStormSlightHail;
 			weatherIcon = `material-symbols:thunderstorm-rounded`;
 			break;
 
 		case 99:
-			weatherString = 'Thunderstorm with Heavy Hail';
+			weatherString = locales[language].weatherStrings.thunderStormHeavyHail;
 			weatherIcon = `material-symbols:thunderstorm-rounded`;
 			break;
 
 		default:
-			weatherString = 'Tornado';
+			weatherString = locales[language].weatherStrings.tornado;
 			weatherIcon = `material-symbols:tornado-rounded`;
 			break;
 	}
@@ -218,6 +224,8 @@ function getHourlyWeather(data) {
 }
 
 function date(i, data) {
+	language = JSON.parse(localStorage.getItem('settings')).language;
+
 	let yesterday = `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)}-${(
 		'0' +
 		(new Date().getDate() - 1)
@@ -234,27 +242,27 @@ function date(i, data) {
 
 	switch (data['daily']['time'][i]) {
 		case yesterday:
-			return 'Yesterday';
+			return locales[language].weekDays.yesterday;
 		case today:
-			return 'Today';
+			return locales[language].weekDays.today;
 		case tomorrow:
-			return 'Tomorrow';
+			return locales[language].weekDays.tomorrow;
 		default:
 			switch (date) {
 				case 0:
-					return 'Sunday';
+					return locales[language].weekDays.sunday;
 				case 1:
-					return 'Monday';
+					return locales[language].weekDays.monday;
 				case 2:
-					return 'Tuesday';
+					return locales[language].weekDays.tuesday;
 				case 3:
-					return 'Wednesday';
+					return locales[language].weekDays.wednesday;
 				case 4:
-					return 'Thursday';
+					return locales[language].weekDays.thursday;
 				case 5:
-					return 'Friday';
+					return locales[language].weekDays.friday;
 				case 6:
-					return 'Saturday';
+					return locales[language].weekDays.saturday;
 			}
 	}
 }

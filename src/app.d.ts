@@ -16,5 +16,6 @@ declare namespace App {
 		};
 		units: String;
 		theme: Number;
+		language: String;
 	}
 }

@@ -10,6 +10,7 @@
 	import { settings } from '../stores/stores';
 	import { onMount } from 'svelte';
 	import { SplashScreen } from '@capacitor/splash-screen';
+	import { locales } from '../libs/locales';
 
 	let weatherInfo;
 
@@ -61,21 +62,25 @@
 	});
 </script>
 
-<div class="space-y-6">
-	<div class="space-y-4">
-		<div class="flex place-content-between items-end">
-			<h1 class="h1">Today</h1>
-			<a class="anchor text-sm opacity-50" href="https://open-meteo.com/">Data by Open-Meteo.com</a>
+{#if $settings.language}
+	<div class="space-y-6">
+		<div class="space-y-4">
+			<div class="flex place-content-between items-end">
+				<h1 class="h1">{locales[$settings.language].weekDays.today}</h1>
+				<a class="anchor text-sm opacity-50" href="https://open-meteo.com/"
+					>{locales[$settings.language].dataByOpenMeteo}</a
+				>
+			</div>
+			<CurrentWeather currentWeatherInfo={weatherInfo ? weatherInfo.currentWeather : null} />
+
+			<HourlyWeather hourlyWeatherInfo={weatherInfo ? weatherInfo.hourlyWeather : null} />
+
+			<TodayCards todayWeatherInfo={weatherInfo ? weatherInfo.dailyWeather[1] : null} />
 		</div>
-		<CurrentWeather currentWeatherInfo={weatherInfo ? weatherInfo.currentWeather : null} />
 
-		<HourlyWeather hourlyWeatherInfo={weatherInfo ? weatherInfo.hourlyWeather : null} />
-
-		<TodayCards todayWeatherInfo={weatherInfo ? weatherInfo.dailyWeather[1] : null} />
+		<div class="space-y-4">
+			<h1 class="h1">{locales[$settings.language].homePage.dailyWeather}</h1>
+			<DailyWeather dailyWeatherInfo={weatherInfo ? weatherInfo.dailyWeather : null} />
+		</div>
 	</div>
-
-	<div class="space-y-4">
-		<h1 class="h1">Daily Weather</h1>
-		<DailyWeather dailyWeatherInfo={weatherInfo ? weatherInfo.dailyWeather : null} />
-	</div>
-</div>
+{/if}

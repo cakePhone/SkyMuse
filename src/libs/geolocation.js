@@ -18,8 +18,6 @@ export const geolocation = {
 				});
 			});
 
-			console.log('Geolocation: API called');
-
 			return results;
 		} catch (error) {
 			console.error(error);
