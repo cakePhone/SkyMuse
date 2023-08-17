@@ -1,5 +1,5 @@
 export const locales = {
-	English: {
+	"English": {
 		// English to be default
 		homePage: {
 			home: 'Home',
@@ -38,7 +38,6 @@ export const locales = {
 			language: 'Language',
 			copyright: {
 				firstParagraph: `You **should** have received a copy of the MIT license when downloading the app, if not, it can be found **_[here](https://github.com/cakePhone/SkyMuse/blob/main/LICENSE)_**.`,
-				licenseCopyAnchor: 'here',
 				thanksToOpenMeteo: 'Thanks to',
 				thanksToOpenMeteoAnchor: 'Open-Meteo.com',
 				notRelatedParagraph: `All of the weather data used in the app is taken from Open-Meteo's geolocation and forecast APIs, for non-commercial use. The app and the dev are in no way related to Open-Meteo.`
