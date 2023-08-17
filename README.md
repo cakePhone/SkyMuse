@@ -29,3 +29,9 @@ I probably set up a releases tab, try checking that. If not, it's under: /androi
 [ ] Fix design on some devices
 
 [ ] Add initial setup screen
+
+## Credits
+
+Huge thanks to everyone here for their contributions:
+
+Esteleth/Joko - Macedonian Translation, UI/UX help
