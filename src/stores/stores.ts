@@ -8,5 +8,7 @@ export const settings: Writable<App.Settings> = localStorageStore('settings', {
 		longitude: 0,
 		latitude: 0
 	},
-	units: 'Metric'
+	units: 'Metric',
+	theme: 0,
+	language: 'English'
 });

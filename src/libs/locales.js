@@ -1,5 +1,5 @@
 export const locales = {
-	"English": {
+	English: {
 		// English to be default
 		homePage: {
 			home: 'Home',
@@ -22,7 +22,7 @@ export const locales = {
 		settingsPage: {
 			title: 'Settings',
 			selectACity: 'Select a Locality',
-      localityPlaceholder: 'Input a locality...',
+			localityPlaceholder: 'Input a locality...',
 			units: 'Units',
 			metric: 'Metric',
 			imperial: 'Imperial',
@@ -96,7 +96,7 @@ export const locales = {
 		settingsPage: {
 			title: 'Definições',
 			selectACity: 'Selecione uma Localidade',
-      localityPlaceholder: 'Escreva uma localidade...',
+			localityPlaceholder: 'Escreva uma localidade...',
 			units: 'Unidades',
 			metric: 'Métricas',
 			imperial: 'Imperiais',
@@ -148,7 +148,7 @@ export const locales = {
 			tornado: 'Tornado'
 		}
 	},
-	"Македонски": {
+	Македонски: {
 		homePage: {
 			home: 'Почетна страница',
 			daylightCycle: 'Изгрев/зајдисонце',
@@ -170,7 +170,7 @@ export const locales = {
 		settingsPage: {
 			title: 'Поставки',
 			selectACity: 'Селектирај Град',
-      localityPlaceholder: '',
+			localityPlaceholder: '',
 			units: 'Единици',
 			metric: 'Метрички',
 			imperial: 'Империјални',

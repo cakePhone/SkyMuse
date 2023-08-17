@@ -137,9 +137,7 @@
 	<footer class="card mt-10 space-y-2 p-4">
 		<div>
 			<SvelteMarkdown source="**© 2023 - Miguel Santos**" />
-			<SvelteMarkdown
-				source={locales[language].settingsPage.copyright.firstParagraph}
-			/>
+			<SvelteMarkdown source={locales[language].settingsPage.copyright.firstParagraph} />
 		</div>
 		<div>
 			<strong

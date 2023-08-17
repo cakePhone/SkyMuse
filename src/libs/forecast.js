@@ -18,7 +18,9 @@ function getWeatherIconString(code, day) {
 	let weatherString;
 	let weatherIcon;
 
-	language = JSON.parse(localStorage.getItem('settings')).language;
+	language = localStorage.getItem('settings')
+		? JSON.parse(localStorage.getItem('settings')).language
+		: 'English';
 
 	switch (code) {
 		case 0:
@@ -224,7 +226,9 @@ function getHourlyWeather(data) {
 }
 
 function date(i, data) {
-	language = JSON.parse(localStorage.getItem('settings')).language;
+	language = localStorage.getItem('settings')
+		? JSON.parse(localStorage.getItem('settings')).language
+		: 'English';
 
 	let yesterday = `${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)}-${(
 		'0' +
