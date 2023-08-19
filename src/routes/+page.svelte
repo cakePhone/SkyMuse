@@ -52,13 +52,15 @@
 		}
 	}
 
-	onMount(async () => {
-		let status = await Network.getStatus();
-		if (!status.connected) {
-			alertModal("SkyMuse couldn't fetch the weather, check your network connection!");
-		}
+	onMount(() => {
+		setInterval(async () => {
+			let status = await Network.getStatus();
+			if (!status.connected) {
+				alertModal("SkyMuse couldn't fetch the weather, check your network connection!");
+			}
 
-		fetchInfo(status.connected);
+			fetchInfo(status.connected);
+		}, 3600);
 	});
 </script>
 

@@ -1,0 +1,1 @@
+const e={async getInfo(n){try{if(n.length<2)return;let t=[];return(await(await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${n}&count=10&language=en&format=json`)).json()).results.forEach(o=>{t.push({name:o.name,country:o.country,longitude:o.longitude,latitude:o.latitude})}),t}catch(t){return console.error(t),null}}};export{e as g};

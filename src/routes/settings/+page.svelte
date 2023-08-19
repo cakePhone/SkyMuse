@@ -1,7 +1,7 @@
 <script>
 	import { geolocation } from './../../libs/geolocation';
 	import { settings } from '../../stores/stores';
-	import { LightSwitch, SlideToggle } from '@skeletonlabs/skeleton';
+	import { Avatar, LightSwitch, SlideToggle } from '@skeletonlabs/skeleton';
 	import { locales } from '../../libs/locales';
 	import SvelteMarkdown from 'svelte-markdown';
 
@@ -47,6 +47,10 @@
 
 	async function getResults() {
 		results = await geolocation.getInfo($settings.city.name);
+	}
+
+	function grabImages(img) {
+		return new URL(`../../pics/${img}.jpg`, import.meta.url).href;
 	}
 
 	$: setTheme(themeGroupValue);
@@ -108,6 +112,7 @@
 			/>
 		</div>
 
+		<!-- Themes -->
 		<div class="flex place-content-between items-center">
 			<h3 class="h3">{locales[language].settingsPage.themes.theme}</h3>
 			<select class="select w-48" bind:value={themeGroupValue}>
@@ -119,11 +124,13 @@
 			</select>
 		</div>
 
+		<!-- Light Mode -->
 		<div class="flex place-content-between items-center">
 			<h3 class="h3">{locales[language].settingsPage.lightMode}</h3>
 			<LightSwitch />
 		</div>
 
+		<!-- Language -->
 		<div class="flex place-content-between items-center">
 			<h3 class="h3">{locales[language].settingsPage.language}</h3>
 			<select class="select w-48" bind:value={language}>
@@ -134,8 +141,26 @@
 		</div>
 	</div>
 
-	<footer class="card mt-10 space-y-2 p-4">
-		<div>
+	<!-- Credits/Copyright -->
+	<footer class="card mt-10 space-y-4 p-4">
+		<div class="space-y-2">
+			<h2 class="h2">{locales[language].settingsPage.credits.credits}</h2>
+			<a
+				href="https://www.instagram.com/esteleth/"
+				class="card bg-surface-200-700-token flex space-x-2 p-2"
+			>
+				<Avatar class="w-10 rounded-token" src={grabImages('Joko')} />
+				<div class="flex flex-col place-content-evenly">
+					<strong class="h4">Esteleth/Joko</strong>
+					<p>{locales[language].settingsPage.credits.jokoAttribution}</p>
+				</div>
+			</a>
+		</div>
+
+		<hr />
+
+		<div class="space-y-2">
+			<h2 class="h2">{locales[language].settingsPage.copyright.copyright}</h2>
 			<SvelteMarkdown source="**© 2023 - Miguel Santos**" />
 			<SvelteMarkdown source={locales[language].settingsPage.copyright.firstParagraph} />
 		</div>

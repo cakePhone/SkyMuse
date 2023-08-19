@@ -10,5 +10,6 @@ export const settings: Writable<App.Settings> = localStorageStore('settings', {
 	},
 	units: 'Metric',
 	theme: 0,
-	language: 'English'
+	language: 'English',
+	setup: false
 });

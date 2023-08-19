@@ -1,11 +1,25 @@
 export const locales = {
 	English: {
-		// English to be default
+		setupPage: {
+			welcomeToSkyMuse: 'Welcome to SkyMuse!',
+			letsSetup: "Let's set you up with the app.",
+			skyMuseLanguages: 'SkyMuse has 3 available languages so far, choose your language',
+			location: 'Location',
+			locationParagraph:
+				'For SkyMuse to work properly, you must set your location. Please input the name of your city, or locality, on the box below.',
+			themes: 'Themes',
+			chooseTheme: 'You can choose between 5 themes for SkyMuse, with more to come!',
+			done: 'Done'
+		},
 		homePage: {
 			home: 'Home',
 			daylightCycle: 'Daylight Cycle',
 			atmosphere: 'Atmosphere',
-			dailyWeather: 'Daily Weather'
+			dailyWeather: 'Daily Weather',
+			sunset: 'Sunset',
+			sunrise: 'Sunrise',
+			visibility: 'Visibility',
+			wind: 'Wind'
 		},
 		weekDays: {
 			yesterday: 'Yesterday',
@@ -36,7 +50,12 @@ export const locales = {
 			},
 			lightMode: 'Light Mode',
 			language: 'Language',
+			credits: {
+				credits: 'Credits',
+				jokoAttribution: 'Icon, Macedonian Translation'
+			},
 			copyright: {
+				copyright: 'Copyright',
 				firstParagraph: `You **should** have received a copy of the MIT license when downloading the app, if not, it can be found **_[here](https://github.com/cakePhone/SkyMuse/blob/main/LICENSE)_**.`,
 				thanksToOpenMeteo: 'Thanks to',
 				thanksToOpenMeteoAnchor: 'Open-Meteo.com',
@@ -75,11 +94,26 @@ export const locales = {
 		}
 	},
 	'Português Europeu': {
+		setupPage: {
+			welcomeToSkyMuse: 'Bem-vindo à SkyMuse!',
+			letsSetup: 'Vamos configurar a app.',
+			skyMuseLanguages: 'SkyMuse tem 3 línguas disponíveis até agora, escolha a sua!',
+			location: 'Localização',
+			locationParagraph:
+				'Para funcionar corretamente, SkyMuse precisa da sua localização. Por favor escreva o nome da sua cidade, ou localidade, na caixa abaixo.',
+			themes: 'Temas',
+			chooseTheme: 'Pode escolher entre 5 temas para SkyMuse, com mais para vir!',
+			done: 'Feito'
+		},
 		homePage: {
 			home: 'Menu Principal',
 			daylightCycle: 'Ciclo do Dia',
 			atmosphere: 'Atmosfera',
-			dailyWeather: 'Clima Diário'
+			dailyWeather: 'Clima Diário',
+			sunset: 'Pôr do sol',
+			sunrise: 'Nascer do sol',
+			visibility: 'Visibilidade',
+			wind: 'Vento'
 		},
 		weekDays: {
 			yesterday: 'Ontem',
@@ -110,7 +144,12 @@ export const locales = {
 			},
 			lightMode: 'Modo Claro',
 			language: 'Língua',
+			credits: {
+				credits: 'Créditos',
+				jokoAttribution: 'Ícone, Tradução Macedônia'
+			},
 			copyright: {
+				copyright: 'Copyright',
 				firstParagraph: `**Deve** ter recebido uma cópia da Licensa MIT com o download desta App, se não recebeu, pode encontrá-la **_[aqui](https://github.com/cakePhone/SkyMuse/blob/main/LICENSE)_**.`,
 				thanksToOpenMeteo: 'Obrigado à',
 				thanksToOpenMeteoAnchor: 'Open-Meteo.com',
@@ -149,11 +188,26 @@ export const locales = {
 		}
 	},
 	Македонски: {
+		setupPage: {
+			welcomeToSkyMuse: 'Добредојдовте во SkyMuse!',
+			letsSetup: 'Ајде да ве поставиме со апликацијата.',
+			skyMuseLanguages: 'SkyMuse до сега има 3 достапни јазици, изберете го вашиот јазик',
+			location: 'Локација',
+			locationParagraph:
+				'За да работи SkyMuse , мора да ја внесете вашата локација. Внесете го името на вашиот град или локалитет подоле.',
+			themes: 'Теми',
+			chooseTheme: 'Можете да одберете помеѓу овие 5 теми за SkyMuse, доаѓаат и повеќе!',
+			done: 'Готово'
+		},
 		homePage: {
 			home: 'Почетна страница',
-			daylightCycle: 'Изгрев/зајдисонце',
+			daylightCycle: 'Сончев циклус',
 			atmosphere: 'Атмосфера',
-			dailyWeather: 'Дневна Прогноза'
+			dailyWeather: 'Дневна Прогноза',
+			sunset: 'Зајдисонце',
+			sunrise: 'Изгрејсонце',
+			visibility: 'Видливост',
+			wind: 'Ветер'
 		},
 		weekDays: {
 			yesterday: 'Вчера',
@@ -184,7 +238,12 @@ export const locales = {
 			},
 			lightMode: 'Светол режим',
 			language: 'Јазик',
+			credits: {
+				credits: 'Акредитација',
+				jokoAttribution: 'Икона, Македонски Превод'
+			},
 			copyright: {
+				copyright: 'Авторски права',
 				firstParagraph: `**Би требало** да сте добиле копија од MIT лиценцата при превземањето на апликацијата, доколку не, можете да ја најдете **_[тука](https://github.com/cakePhone/SkyMuse/blob/main/LICENSE)_**.`,
 				thanksToOpenMeteo: 'Благодарност до',
 				thanksToOpenMeteoAnchor: 'Open-Meteo.com',

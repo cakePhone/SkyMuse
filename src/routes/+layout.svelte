@@ -1,6 +1,7 @@
 <script>
 	import { locales } from './../libs/locales.js';
 	import { settings } from './../stores/stores.ts';
+	import Setup from '../setupScreen/setup.svelte';
 
 	// Literally fixes vite imports for some reason
 	function getThemeURL(name) {
@@ -35,7 +36,10 @@
 		<link rel="stylesheet" href={getThemeURL('default')} />
 	{/if}
 </svelte:head>
-{#if $settings.language}
+
+{#if !$settings.setup}
+	<Setup />
+{:else if $settings.language}
 	<Modal />
 	<AppShell slotHeader="shadow-lg" slotFooter="shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
 		<svelte:fragment slot="header">
