@@ -11,8 +11,8 @@
 	<div class="grid grid-cols-1 gap-4">
 		<TodayCard>
 			<h3 class="h3" slot="title">{locales[$settings.language].homePage.daylightCycle}</h3>
-			{#if todayWeatherInfo}
-				<div class="grid h-full w-full grid-cols-2 gap-2">
+			<div slot="content" class="grid h-full w-full grid-cols-2 gap-2">
+				{#if todayWeatherInfo}
 					<div
 						class="card bg-surface-200-700-token flex flex-col items-center justify-center space-y-2 p-2"
 					>
@@ -27,13 +27,16 @@
 						<Icon icon="tabler:sunset" class="h-10 w-10" />
 						<p>{todayWeatherInfo.sunset}</p>
 					</div>
-				</div>
-			{/if}
+				{:else}
+					<div class="placeholder h-32 w-full animate-pulse" />
+					<div class="placeholder h-32 w-full animate-pulse" />
+				{/if}
+			</div>
 		</TodayCard>
 		<TodayCard>
 			<h3 class="h3" slot="title">{locales[$settings.language].homePage.atmosphere}</h3>
-			{#if todayWeatherInfo}
-				<div class="grid h-full w-full grid-cols-2 gap-2">
+			<div slot="content" class="grid h-full w-full grid-cols-2 gap-2">
+				{#if todayWeatherInfo}
 					<div
 						class="card bg-surface-200-700-token flex flex-col items-center justify-center space-y-2 p-2"
 					>
@@ -61,8 +64,11 @@
 							</p>
 						</div>
 					</div>
-				</div>
-			{/if}
+				{:else}
+					<div class="placeholder h-32 w-full animate-pulse" />
+					<div class="placeholder h-32 w-full animate-pulse" />
+				{/if}
+			</div>
 		</TodayCard>
 	</div>
 {/if}

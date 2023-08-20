@@ -53,14 +53,18 @@
 	}
 
 	onMount(() => {
+		let delay = 0; // Delay is 0 to avoid waiting for first run
+
 		setInterval(async () => {
 			let status = await Network.getStatus();
 			if (!status.connected) {
 				alertModal("SkyMuse couldn't fetch the weather, check your network connection!");
 			}
 
+			delay = 3600000; // set delay to 1 hour
+
 			fetchInfo(status.connected);
-		}, 3600);
+		}, delay);
 	});
 </script>
 

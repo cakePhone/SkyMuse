@@ -4,7 +4,5 @@
 	<slot name="title">
 		<div class="placeholder h-8 flex-shrink-0 animate-pulse" />
 	</slot>
-	<slot>
-		<div class="placeholder h-48 w-36 animate-pulse" />
-	</slot>
+	<slot name="content" />
 </div>
