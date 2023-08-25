@@ -20,6 +20,10 @@ Due to this, SkyMuse was designed in a way that you MUST input your location man
 
 I probably set up a releases tab, try checking that. If not, it's under: /android/app/release/app-release.apk
 
+## Support
+
+Join my [Discord](https://discord.gg/aTGvyfQp)! This is a central space for all my projects.
+
 ## To Do's
 
 [ ] Add Daily Notifications
